@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset for the sticky header so it stops at the perfect position */
+#rooms,
+#amenities,
+#inquiry {
+  scroll-margin-top: 130px;   /* Height offset equal to your header */
+}
+
+body {
+  color: #e4e7eb;
+  background-color: #feffff;   /* Dark base matching the header */
+  line-height: 1.6;
+}
+
+/* Centered Header with White Background */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;   /* Pure white background */
+  padding: 1.2rem 1rem;
+  border-bottom: 2px solid #ffd200;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* --- Premium Brand Header (DREAM HOTEL & Logo) --- */
+.brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background-color: #0b1118;           /* Deep dark backdrop matching logo & sign */
+  padding: 0.6rem 1.6rem;               /* Sleek signboard badge shape */
+  border-radius: 12px;                  /* Smooth rounded corners */
+  border: 1.5px solid #ffd200;          /* Fine gold border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft drop shadow */
+  margin-bottom: 1rem;
+}
+
+/* Logo image styling */
+.brand-logo {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Container for DREAM and HOTEL */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  line-height: 1.05;                   /* Compact vertical spacing */
+}
+
+/* Unified styling for both words: exact same size and typography */
+.brand-text .word-dream,
+.brand-text .word-hotel {
+  font-size: 1.45rem;                  /* Identical bold size */
+  font-weight: 900;                    /* Extra-bold modern weight */
+  letter-spacing: 3px;                 /* Luxury hotel tracking */
+  color: #ffd200;                      /* Aviation gold */
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); /* Subtle depth */
+}
+
+/* --- Navigation Bar: Centering Amenities under the Logo --- */
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Left space, centered button, right space */
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 520px;                     /* Centers the button bar with the header */
+  margin: 0.6rem auto 0 auto;           /* Auto margins lock it to the exact page center */
+  padding: 0;
+  list-style: none;
+}
+
+/* Base button styling */
+.nav-links a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.65rem 1.4rem;
+  border-radius: 30px;
+  color: #ffd200;                       /* Aviation yellow */
+  background-color: #0b1118;           /* Dark contrast background */
+  border: 2px solid #ffd200;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+/* 1. Rooms (Left Side - pushes right toward Amenities) */
+.nav-links a[href="#rooms"] {
+  justify-self: end;
+  min-width: 110px;
+}
+
+/* 2. Amenities (Direct Center - locked dead-center under the logo) */
+.nav-links a[href="#amenities"] {
+  justify-self: center;
+  min-width: 130px;
+}
+
+/* 3. Inquire (Right Side - pushes left toward Amenities) */
+.nav-links a[href="#inquiry"] {
+  justify-self: start;
+  min-width: 110px;
+}
+
+/* Hover lift effect */
+.nav-links a:hover {
+  background-color: #ffd200;
+  color: #0b1118;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 210, 0, 0.4);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('image 1.jpg') center/cover;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;          /* Makes the text noticeably bigger */
+  font-weight: 500;            /* Makes the lettering crisp and readable */
+  max-width: 680px;            /* Keeps the text line neatly balanced */
+  margin: 0.5rem auto 1.2rem;  /* Centers text and gives breathing room */
+  line-height: 1.5;            /* Comfortable line spacing */
+}
+
+.hero .btn {
+  margin-top: 2.2rem;   /* Pushes the button down away from the text */
+}
+
+/* Gold Action Buttons */
+/* Gold Action Buttons */
+.btn {
+  display: inline-block;
+  background-color: #ffd200;   /* Aviation yellow */
+  color: #0b1118;              /* Dark text for contrast */
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: #ffdf40;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 210, 0, 0.3);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+
+/* Section Layout & Headings */
+.section {
+  padding: 4rem 1.5rem;
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Secondary surface background for contrast */
+.bg-light {
+  background-color: #121a22;   /* Dark slate background instead of white */
+  max-width: 100%;
+}
+
+.section h2 {
+  font-size: 1.85rem;
+  margin-bottom: 2rem;
+  color: #000000;              /* Black text */
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Yellow accent line under headings */
+.section h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #ffd200;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  max-width: 100%;
+}
+/* Cards */
+/* Room Cards */
+.card {
+  background-color: #000000;   /* Elevated dark card */
+  border: 1px solid #23303d;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #ffd200;       /* Glows yellow on hover */
+}
+
+.card-img {
+  width: 100%;                  /* Fills the full width of the card */
+  height: 220px;                /* Sets a fixed height so the div doesn't collapse */
+  background-size: cover;       /* Scales the photo to fill the box without stretching */
+  background-position: center;  /* Keeps the center of the photo in view */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h3 {
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.card-body p {
+  color: #a6b4c2;
+  font-size: 0.95rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #ffd200;              /* Room price in gold */
+  font-size: 1.15rem;
+  margin-top: 0.75rem;
+}
+
+/* Amenities */
+/* Amenities Badges */
+.amenity-item {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #243545;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.amenity-item:hover {
+  border-color: #ffd200;
+}
+
+/* Reservation Form */
+.inquiry-form {
+  max-width: 520px;
+  margin: auto;
+  text-align: left;
+  background-color: #000000;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #23303d;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cfd8dc;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1a2530;
+  border: 1px solid #2c3e50;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Gold border when typing in an input */
+.form-group input:focus, 
+.form-group select:focus {
+  border-color: #ffd200;
+  box-shadow: 0 0 0 2px rgba(255, 210, 0, 0.2);
+}
+
+.status-msg {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #ffd200;
+}
+
+footer {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #070b10;
+  color: #78909c;
+  font-size: 0.85rem;
+  border-top: 1px solid #1a2530;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J Dreams Hotel | Sri Lanka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Centered Header & Navigation -->
+  <header class="main-header">
+    <div class="brand-container">
+      <!-- 1. The Logo -->
+      <img src="logo.jpg" alt="J Dreams Hotel Logo" class="brand-logo">
+      
+      <!-- 2. The Styled Name (matching the hotel sign) -->
+      <div class="brand-text">
+        <span class="word-dream">DREAM</span>
+        <span class="word-hotel">HOTEL</span>
+      </div>
+    </div>
+
+    <!-- Centered Navigation Links -->
+    <nav class="nav-links">
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#inquiry">Inquire</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Experience Tranquility in Sri Lanka</h1>
+      <p>Peaceful stays, seamless airport transit, and warm Sri Lankan hospitality</p>
+      <a href="#inquiry" class="btn">Book Your Stay</a>
+    </div>
+  </header>
+
+  <!-- Rooms Showcase -->
+  <section id="rooms" class="section">
+    <h2>Our Accommodations</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-img" style="background-image:url('deluxe room.jpg');"></div>
+        <div class="card-body">
+          <h3>Deluxe Double Room</h3>
+          <p>King-size bed, private balcony, spacious bath</p>
+          <p class="price">From $30 / night</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background-image: url('next deluxe.jpg');"></div>
+        <div class="card-body">
+          <h3>Family Garden View Room</h3>
+          <p>Two double beds, garden terrace, spacious bath</p>
+          <p class="price">From $45 / night</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section id="amenities" class="section bg-light">
+    <h2>Hotel Amenities</h2>
+    <div class="amenities-grid">
+      <div class="amenity-item">🌊 Free Airport pickup and Drop</div>
+      <div class="amenity-item">🏊 Pool Access</div>
+      <div class="amenity-item">🍳 Free Breakfast</div>
+      <div class="amenity-item">📶 High-Speed Wi-Fi</div>
+    </div>
+  </section>
+
+  <!-- Booking Inquiry Form -->
+  <section id="inquiry" class="section">
+    <h2>Reservation Inquiry</h2>
+    <form id="inquiryForm" class="inquiry-form">
+      <div class="form-group">
+        <label for="guestName">Full Name</label>
+        <input type="text" id="guestName" required placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="roomType">Select Room</label>
+        <select id="roomType">
+          <option value="Deluxe Ocean Room">Deluxe Double Room</option>
+          <option value="Family Garden Suite">Family Garden View Room</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="checkIn">Check-In Date</label>
+        <input type="date" id="checkIn" required>
+      </div>
+      <div class="form-group">
+        <label for="checkOut">Check-Out Date</label>
+        <input type="date" id="checkOut" required>
+      </div>
+      <button type="submit" class="btn btn-full">Submit Booking Inquiry</button>
+      <p id="formStatus" class="status-msg"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 J Dreams Hotel, Sri Lanka. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
